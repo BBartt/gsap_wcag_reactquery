@@ -1,0 +1,47 @@
+@use "../../styles/colors";
+
+.character {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 600ms cubic-bezier(0.25, 0.8, 0.25, 1);
+
+  border-top: 2px dashed colors.$blue;
+  padding: 10px 0px 0px 0px;
+  height: 150px;
+  width: 80vw;
+  width: 350px;
+
+  &:hover {
+    box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.12), 8px 8px 0px rgba(0, 0, 0, 0.24);
+  }
+
+  &:nth-child(even) {
+    // border-top-style: solid;
+  }
+
+  .name {
+    text-align: center;
+    font-size: 3rem;
+    color: colors.$black;
+  }
+
+  .link {
+    text-decoration: none;
+    text-align: center;
+    background-color: colors.$blue;
+    padding: 6px 40px;
+    transition: all 600ms cubic-bezier(0.25, 0.8, 0.25, 1);
+    border: 3px solid colors.$blue;
+    font-weight: 500;
+    color: colors.$white;
+
+    &:hover {
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+      background-color: white;
+      color: colors.$blue;
+    }
+  }
+}
