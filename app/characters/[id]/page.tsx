@@ -50,8 +50,8 @@ const Page = ({ params }: Props) => {
       <h4 className="name">Imię: {name}</h4>
 
       <div className="gender">Płeć: {gender}</div>
-      <Species id={getId(personData?.species[0])} />
-      <Homeworld id={getId((personData as ICharacter)?.homeworld)} />
+      <Species id={getId(personData?.species[0] ?? "")} />
+      <Homeworld id={getId((personData as ICharacter)?.homeworld ?? "")} />
       <div className="birth_year">Rok urodzenia: {birth_year}</div>
 
       <div className="films">

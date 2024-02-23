@@ -1,11 +1,10 @@
 import { getData } from "@/api/getData";
-import { getId } from "@/utils";
 import { useQuery } from "@tanstack/react-query";
 
 const Homeworld = ({ id }: { id: string }) => {
   const { error, data, isSuccess, isFetching, isError, isLoading } = useQuery({
     queryKey: ["homeworld", id],
-    queryFn: () => getData<IPlanet>(`planets/${getId(id)}`),
+    queryFn: () => getData<IPlanet>(`planets/${id}`),
     enabled: !!id,
   });
 
