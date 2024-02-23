@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import ReactQueryProvider from "@/providers/react-query-providder";
 
 import "@/styles/_globals.scss";
+import Header from "@/components/Header";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,6 +21,8 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
+        <Header />
+
         <main>
           <ReactQueryProvider>{children}</ReactQueryProvider>
         </main>

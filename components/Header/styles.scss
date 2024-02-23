@@ -1,0 +1,30 @@
+@use "../../styles/colors";
+
+.header {
+  height: 60px;
+  width: 100%;
+  border-bottom: 2px dashed colors.$blue;
+
+  .nav {
+    height: 100%;
+
+    .ul {
+      height: 100%;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+
+      list-style-type: none;
+      .li {
+        a {
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
