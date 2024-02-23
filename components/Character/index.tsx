@@ -8,7 +8,7 @@ const Character = ({ name, url }: ICharacter) => {
     <li className="character">
       <h4 className="name">{name}</h4>
 
-      <Link className="link" href={"character/" + getId(url)}>
+      <Link className="link" href={"characters/" + getId(url)}>
         Szczegóły
       </Link>
     </li>
