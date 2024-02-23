@@ -6,3 +6,5 @@ export const getId = (url: string) => {
 
   return id;
 };
+
+export const noOp = (): void => {};
