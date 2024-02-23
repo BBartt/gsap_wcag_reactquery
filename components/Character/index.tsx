@@ -1,20 +1,16 @@
 import Link from "next/link";
 
-import { getId, noOp } from "@/utils";
+import { getId } from "@/utils";
 import { RoutesEnum } from "@/constants";
-
-import saveSvg from "@/public/assets/SVGs/save.svg";
-
-import Icon from "../Icon";
 
 import "./page.scss";
 
-interface CharacterProps extends ICharacter {
-  handleIconClick: (character: ICharacter) => void;
+interface CharacterProps extends Pick<ICharacter, "name" | "url"> {
+  icon?: JSX.Element;
 }
 
 const Character = (character: CharacterProps) => {
-  const { name, url, handleIconClick } = character;
+  const { name, url, icon } = character;
 
   return (
     <li className="character">
@@ -24,12 +20,7 @@ const Character = (character: CharacterProps) => {
         Szczegóły
       </Link>
 
-      <Icon
-        svg={saveSvg}
-        alt="save"
-        className="save-icon"
-        onClick={() => handleIconClick(character)}
-      />
+      {icon && icon}
     </li>
   );
 };

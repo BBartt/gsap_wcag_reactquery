@@ -4,8 +4,11 @@ import { useQuery } from "@tanstack/react-query";
 import { getPeople } from "@/api/people/getPeople";
 import Character from "@/components/Character";
 
-import "./page.scss";
 import useLocalStorage from "@/hooks/useLocalStorage";
+import Icon from "@/components/Icon";
+
+import saveSvg from "@/public/assets/SVGs/save.svg";
+import "./page.scss";
 
 const Page = () => {
   const [storedCharacters, setValue] = useLocalStorage<ICharacter[]>(
@@ -46,7 +49,14 @@ const Page = () => {
             <Character
               key={character.url}
               {...character}
-              handleIconClick={handleSave}
+              icon={
+                <Icon
+                  svg={saveSvg}
+                  alt="save"
+                  className="save-icon"
+                  onClick={() => handleSave(character)}
+                />
+              }
             />
           );
         })}
