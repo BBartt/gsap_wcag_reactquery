@@ -1,0 +1,20 @@
+.favourites {
+  margin: 0 auto;
+  width: 95vw;
+
+  .title {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 10px;
+  }
+
+  .content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+
+    .character {
+    }
+  }
+}
