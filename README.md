@@ -14,6 +14,6 @@ How to build?:
 npm run build
 ```
 
-Live: [link](https://test-mzpjl4hy5-bbartt.vercel.app/characters)
+Live: [link](https://test-six-nu-35.vercel.app)
 
 Stack: Next.js, TS, Sass, react-query
